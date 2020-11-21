@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* listor */
+ul, ol {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    list-style: none;
+}
+
+/* länkar */
+a {
+    /* länkars grundutseende */
+    color:var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    /* inställningar för hovring över länkar */
+    color:var(--secondary-color);
+    text-decoration: underline;
+}
+a:active,
+a:focus {
+    /* inställningar för aktiva länkar */
+}
+a:visited {
+    /* inställningar för besökta länkar */
+}
+
+
+img {
+    width:100%;
+    height:auto;
+} 
+
+html {
+    font-size: 18px;
+}
+body {
+    font-size: 1rem;
+    padding: 20px;
+    text-align: center; 
+    font-family: 'Lato';
+ }
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+    font-family: 'Merriweather'; 
+    /* font-family: var(--heading-font); */
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.75rem
+}
+h5 {
+    font-size: 1.5rem;
+}
+h6 {
+    font-size: 1.25rem;
+}
+
+.toggle-menu {
+    color: inherit;
+    font-size: 2rem;
+}
+
+/* 
+ * Sidnavigering 
+ */
+
+.site-navigation {
+    display: none;
+    
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: auto;
+    z-index: 1000;
+
+    background-color: #444444;
+    padding: 10px 10px;
+}
+.site-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.site-navigation a {
+    display: block;
+    padding: .25rem 1.5rem;
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.90rem;
+    text-transform: uppercase;
+}
+.site-navigation a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+.site-navigation .active a {
+    background-color: #ddd;
+    color: #333;
+}
+
+.site-header {
+    position: relative;
+    /* background-color: #222; */
+    background-color: grey;
+    color: #fff;
+}
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* gör mellanrum mellan objekten */
+    align-items: center; /* justera objekten till mitten i containern */
+}
+
+.brand {}
+/* .brand a */
+.brand-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* .brand h1 {} */
+.brand-name {}
+
+.logo {
+    max-width: 50px;
+    margin: 5px 20px 5px 0px;
+} 
+
+/*
+.h2 .brand-name {
+    display: none;
+}
+*/
+.epost-rubrik {
+    background-color: rgb(186, 218, 186);
+}
+
+.welcome {
+    text-align: center;
+    /* background-color: lightgrey; */
+    background-color: rgb(186, 218, 186);
+    height: auto;
+}
+
+.ingress {
+    /* font-size: 1rem; */
+    color: red;
+}
+
+
+.grid-container {
+    display: grid;
+    min-height: 20vh;
+    grid-template-columns: repeat(4,1 fr);
+    grid-template-rows: repeat(4,1 fr);
+
+    background-color: darkseagreen;
+    
+    align-items: center;    
+    justify-items: center; 
+}
+
+.grid-container-blue {
+    display: grid;
+    min-height: 20vh;
+   
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(12 1fr);
+
+    background-color: rgb(186, 218, 186);
+
+    grid-gap: 1rem;
+    
+    grid-template-areas: 
+        ". . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . ."
+        ". . a a a a . b b b b . c c c c c . . ."
+        ". . . . . . . . . . . . c c c c c . . ."
+        ". . . . . . . . . . . . c c c c c . . ."
+        ". . . . . . . . . . . . c c c c c . . ."
+        ". . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . ."
+        ". . . . . . . . . . . . . . . . . . . .";
+     
+  }
+
+.grid-item-blue {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    justify-content: space-evenly; 
+
+    /* align-items: center; */
+}
+
+.grid-item-blue-1 {
+    grid-area: a;
+}
+
+.grid-item-blue-2 {
+    grid-area: b;
+}
+
+.grid-item-blue-3 {
+    grid-area: c;
+}
+
+.welcome img{ 
+}
+
+/* SIDFOT */
+.site-footer {
+    padding: 60px 0;
+    /* background-color: #222; */
+    background-color: gray;
+    color: #fff;
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.site-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact address,
+.contact div {
+    margin-bottom: .5rem;
+}
+.contact i {
+    margin-right: 1rem;
+}
+.social-links ul li {
+    display: inline-block;
+}
+.social-links a {
+    font-size: 3rem;
+}
+.social-links a:hover i {
+    color: #fff;
+}
+
+.post {
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: sandybrown;
+}
+
+.post-1 {
+    background-color: rosybrown;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    .grid-container-blue {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+                "a"
+                "b"
+                "c";      
+    } 
+   
+    .flex{ 
+            flex-direction: column;
+    }
+}
+
+.container {
+    position: relative; 
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row {
+    margin: 0 -20px;
+}
+
+.column {
+    padding: 0 20px;
+    /* margin-bottom: 40px; */
+} 
+.btn {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.btn-black {
+    color: #fff;
+    background-color: #333;
+}
+.btn-cart {
+    padding: .75rem 1.5rem;
+    text-align: center;
+    background-color: rgba(0,255,0,.5);
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.show {
+    display: block;
+}
+
+.fa-facebook {
+    color: #3b5999;
+}
+.fa-instagram {
+    color: #e4405f;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover {
+    color: inherit;
+    /* background-color: #3b5999; */
+}
+
